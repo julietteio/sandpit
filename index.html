@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en-au">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OnlyFacts — Clean Nav + Sidebar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header / Global nav -->
+  <header class="header">
+    <div class="nav-wrap">
+        
+      <!-- Logo -->
+      <a href="#" class="logo" aria-label="OnlyFacts (logo)">
+        <img src="onlyfacts-logo.png" alt="OnlyFacts logo" class="logo-img" />
+      </a>
+
+      <!-- Centre nav -->
+      <nav class="nav" aria-label="Global">
+        <a href="#" class="link">Start Here</a>
+        <a href="#" class="link">About Us</a>
+
+        <!-- Dropdown: Data by Location -->
+        <details>
+          <summary class="trigger">Data by Location ▾</summary>
+          <div class="panel panel-narrow" role="menu" aria-label="Data by Location">
+            <ul>
+              <li><a href="#">Countries</a></li>
+              <li><a href="#">Australia</a></li>
+              <li><a href="#">States and Territories</a></li>
+              <li><a href="#">LGAs</a></li>
+              <li><a href="#">Postcodes</a></li>
+            </ul>
+          </div>
+        </details>
+      </nav>
+
+      <!-- Right cluster -->
+      <div class="right">
+        <a href="#" class="cta">Newsletter Sign Up</a>
+        <a href="#" class="pill">OnlyFacts Studio</a>
+      </div>
+
+      <!-- Mobile fallback (optional) -->
+      <div class="mobile">
+        <details>
+          <summary class="pill">Menu ▾</summary>
+          <div class="panel" role="menu" aria-label="Mobile menu">
+            <ul class="mobile-list">
+              <li><a href="#">Start Here</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Countries</a></li>
+              <li><a href="#">Australia</a></li>
+              <li><a href="#">States and Territories</a></li>
+              <li><a href="#">LGAs</a></li>
+              <li><a href="#">Postcodes</a></li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>
+
+  <!-- Announcement bar -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      For insights and updates, get the free weekly climate data briefing.
+      <a href="#" class="announcement-link">Sign up →</a>
+    </div>
+  </div>
+
+<!-- Main layout -->
+   
+<main>
+
+    <div class="layout">
+
+        <!-- LEFT: Topics sidebar -->
+
+        <aside class="sidebar" aria-label="Browse by topic">
+
+            <div class="sidebar-head">
+                <strong>Data by Topic</strong>
+            </div>
+
+            <!-- Search -->
+            
+            <div class="topic-search">
+                <label for="topic-search-input" class="sr-only">Search topics</label>
+                <input id="topic-search-input" type="search" placeholder="Search topics…" autocomplete="off">
+            </div>
+
+            <nav id="topics-tree" class="topic-tree">
+
+                <!-- Emissions -->
+
+                <details>
+                    <summary class="top-topic"><span>🌍  Emissions</span></summary>
+                    <ul id="emissions-list">
+
+                        <!-- Pinned (featured) -->
+                        <li class="topic-item pin">
+                            <a href="#">Net</a>
+                        </li>
+                        <li class="topic-item pin">
+                            <a href="#">Gross</a>
+                        </li>
+
+                        <!-- Divider between pinned and alphabetical -->
+                         <li class="divider" aria-hidden="true">
+                         </li>
+                         
+                        <!-- Alphabetical section -->
+                        <!-- Country emissions -->
+                        <li>
+                            <details>
+                                <summary><span>Countries</span>
+                                </summary>
+                                <ul>
+                                    <li class="topic-item"><a href="#">By population</a></li>
+                                    <li class="topic-item"><a href="#">Raw</a></li>
+                                </ul>
+                            </details>
+                        </li>
+
+                        <!-- Corporate emissions -->
+                        <li>
+                            <details>
+                                <summary><span>Corporate</span></summary>
+                                <ul>
+                                    <li class="topic-item"><a href="#">Overview</a></li>
+                                    <li class="topic-item"><a href="#">Scope 1</a></li>
+                                    <li class="topic-item"><a href="#">Scope 2</a></li>
+                                    <li class="topic-item"><a href="#">Scope 1 + 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+
+                        <li class="topic-item"><a href="#">Exported</a></li>
+                        <li>
+                            <details>
+                                <summary><span>Facilities</span></summary>
+                                <ul>
+                                    <li class="topic-item"><a href="#">Mining</a></li>
+                                    <li class="topic-item"><a href="#">Electricity</a></li>
+                                    <li class="topic-item"><a href="#">Manufacturing</a></li>
+                                    <li class="topic-item"><a href="#">Financial</a></li>
+                                </ul>
+                            </details>
+                        </li>
+
+                        <li class="topic-item"><a href="#">Revisions</a></li>
+
+                        <!-- Sector emissions -->
+                         <li>
+                            <details>
+                                <summary><span>Sectors</span></summary>
+                                <ul>
+                                    <li class="topic-item"><a href="#">Agriculture</a></li>
+                                    <!-- Electricity -->
+                                     <li>
+                                        <details>
+                                            <summary><span>Electricity</span></summary>
+                                            <ul>
+                                                <li class="topic-item"><a href="#">Intensity</a></li>
+                                            </ul>
+                                        </details>
+                                    </li>
+                                    <li class="topic-item"><a href="#">Fugitive</a></li>
+                                    <li class="topic-item"><a href="#">Industrial Processes</a></li>
+                                    <li class="topic-item"><a href="#">Land Use</a></li>
+                                    <li class="topic-item"><a href="#">Stationary Energy</a></li>
+                                    <!-- Transport -->
+                                     <li>
+                                        <details>
+                                            <summary><span>Transport</span></summary>
+                                            <ul>
+                                                <li class="topic-item"><a href="#">Roads</a></li>
+                                            </ul>
+                                        </details>
+                                    </li>
+                                    <li class="topic-item"><a href="#">Waste</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </details>
+
+
+                <!-- Energy -->
+                <details>
+                    <summary class="top-topic"><span>⚡  Energy</span></summary>
+                    <ul>
+                        <li class="topic-item pin"><a href="#">Electricity Mix</a></li>
+                        <li class="topic-item pin"><a href="#">Renewables vs Fossils    </a></li>
+                        
+                        <!-- Divider between pinned and alphabetical -->
+                        <li class="divider" aria-hidden="true"></li>
+                        <li>
+                            <details>
+                                <summary><span>Installations</span></summary>
+                                <ul>
+                                    <li class="topic-item"><a href="#">Solar</a></li>
+                                    <li class="topic-item"><a href="#">Water Heaters</a></li>
+                                    <li class="topic-item"><a href="#">Heat Pumps</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary><span>Renewables</span></summary>
+                                <ul>
+                                    <li class="topic-item"><a href="#">Solar</a></li>
+                                    <li>
+                                        <details>
+                                            <summary><span>Capacity</span></summary>
+                                            <ul>
+                                                <li class="topic-item"><a href="#">Australia</a></li>
+                                                <li class="topic-item"><a href="#">Countries</a></li>
+                                            </ul>
+                                        </details>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </details>
+
+
+                <!-- Transport -->
+                <details>
+                    <summary class="top-topic">
+                        <span>🚗 Transport</span>
+                    </summary>
+                    <ul>
+                        <li class="topic-item pin">
+                            <a href="#">EV Sales</a>
+                        </li>
+                        <li class="topic-item pin">
+                            <a href="#">EV Registrations</a>
+                        </li>
+                        <!-- Divider between pinned and alphabetical -->
+                        <li class="divider" aria-hidden="true"></li>
+                        <!-- Countries dropdown -->
+                        <li>
+                            <details>
+                                <summary>
+                                    <span>Countries</span>
+                                </summary>
+                                <ul>
+                                    <!-- Registrations -->
+                                    <li>
+                                        <details>
+                                            <summary><span>Registrations</span></summary>
+                                            <ul>
+                                                <li class="topic-item"><a href="#">By Population</a></li>
+                                                <li class="topic-item"><a href="#">Raw</a></li>
+                                            </ul>
+                                        </details>
+                                    </li>
+                                    <!-- Sales -->
+                                    <li>
+                                        <details>
+                                            <summary><span>Sales</span></summary>
+                                            <ul>
+                                                <li class="topic-item"><a href="#">By Population</a></li>
+                                                <li class="topic-item"><a href="#">Raw</a></li>
+                                            </ul>
+                                        </details>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li class="topic-item"><a href="#">Fuels</a></li>
+                    </ul>
+                </details>
+            </nav>
+        </aside>
+        
+        <!-- RIGHT side: inner grid that holds columns 2, 3 and RHS -->
+        
+        <div class="main">
+            
+            <!-- 4 content cards (block 1) -->
+
+            <section class="content-col span-mid">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Card 1</h3>
+                    </div>
+                    <div class="content-card">
+                        <h3>Card 2</h3>
+                    </div>
+                    <div class="content-card">
+                        <h3>Card 3</h3>
+                    </div>
+                    <div class="content-card">
+                        <h3>Card 4</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social sidebar #1: LinkedIn -->
+
+            <section class="social-section">
+
+                <div class="social-header">
+                    <div class="social-title">
+                        <span class="badge linkedin">in</span><strong>LinkedIn</strong>
+                    </div>
+                    <a href="#" class="social-viewall">View feed →</a>
+                </div>
+
+                <div class="social-body">
+
+                    <article class="social-item">
+                        <div class="social-meta">Thomas R. Lewis • 2d
+                        </div>
+                        <p class="social-text">
+                            ENTSO-E just published another report on European electricity market activity.
+                        </p>
+                        <a class="social-link" href="https://www.linkedin.com/posts/thomas-r-lewis_entso-e-just-published-another-report-on-activity-7379854553632108545-bm_0/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA0YkJoByzI6OUfeJQhpZ0RRkk9NghCK08U" target="_blank">Read on LinkedIn</a>
+                    </article>
+
+                    <article class="social-item">
+                        <div class="social-meta">Energy Insights Group • 5d</div>
+                        <p class="social-text">
+                            Our Q3 report shows renewables overtook coal in Australia’s grid mix for the first time.
+                        </p>
+                        <a class="social-link" href="#" target="_blank">Read on LinkedIn</a>
+                    </article>
+
+                    <article class="social-item">
+                        <div class="social-meta">Energy Insights Group • 5d</div>
+                        <p class="social-text">
+                            Our Q3 report shows renewables overtook coal in Australia’s grid mix for the first time.
+                        </p>
+                        <a class="social-link" href="#" target="_blank">Read on LinkedIn</a>
+                    </article>
+
+                    <article class="social-item">
+                        <div class="social-meta">Energy Insights Group • 5d</div>
+                        <p class="social-text">
+                            Our Q3 report shows renewables overtook coal in Australia’s grid mix for the first time.
+                        </p>
+                        <a class="social-link" href="#" target="_blank">Read on LinkedIn</a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Next block of four, stacked below the first -->
+            
+            <section class="content-col span-mid">
+                <div class="content-grid">
+                    <div class="content-card"><h3>Card 1</h3></div>
+                    <div class="content-card"><h3>Card 2</h3></div>
+                    <div class="content-card"><h3>Card 3</h3></div>
+                    <div class="content-card"><h3>Card 4</h3></div>
+                </div>
+            </section>
+
+            <!-- Social sidebar #2: Reddit -->
+            <section class="social-section">
+
+                <div class="social-header">
+
+                    <div class="social-title">
+                        <span class="badge reddit">r</span>
+                        <strong>Reddit</strong>
+                    </div>
+                    <a href="#" class="social-viewall">View feed →</a>
+                </div>
+
+                <div class="social-body">
+                    <article class="social-item">
+                        <div class="social-meta">r/MapPorn • 1d
+                        </div>
+                        <p class="social-text">
+                            The US by places with similar climates 🌎  
+                            Fascinating cartography comparing U.S. regions with global counterparts.
+                        </p>
+                        <a class="social-link" href="https://www.reddit.com/r/MapPorn/comments/1jra69n/the_us_by_places_with_similar_climates/" target="_blank">Join discussion
+                        </a>
+                    </article>
+
+                    <article class="social-item">
+                        <div class="social-meta">r/energy • 3d
+                        </div>
+                        <p class="social-text">
+                            Offshore wind: New UK project expected to power 1.5 million homes.
+                        </p>
+                        <a class="social-link" href="#" target="_blank">Join discussion
+                        </a>
+                    </article>
+
+                    <article class="social-item">
+                        <div class="social-meta">r/energy • 3d
+                        </div>
+                        <p class="social-text">
+                            Offshore wind: New UK project expected to power 1.5 million homes.
+                        </p>
+                        <a class="social-link" href="#" target="_blank">Join discussion
+                        </a>
+                    </article>
+
+                    <article class="social-item">
+                        <div class="social-meta">r/energy • 3d
+                        </div>
+                        <p class="social-text">
+                            Offshore wind: New UK project expected to power 1.5 million homes.
+                        </p>
+                        <a class="social-link" href="#" target="_blank">Join discussion
+                        </a>
+                    </article>
+                </div>
+            </section>
+            
+            <!-- Next block of four, stacked below the first -->
+            
+            <section class="content-col span-mid">
+                <div class="content-grid">
+                    <div class="content-card"><h3>Card 1</h3></div>
+                    <div class="content-card"><h3>Card 2</h3></div>
+                    <div class="content-card"><h3>Card 3</h3></div>
+                    <div class="content-card"><h3>Card 4</h3></div>
+                </div>
+            </section>
+
+            <!-- Social sidebar #3: Bluesky & X -->
+            
+            <section class="social-section">
+                <div class="social-header">
+                    <div class="social-title">
+                        <span class="badge bluesky">b</span>
+                        <span class="divider-dot">•</span>
+                        <span class="badge x">x</span>
+                        <strong>Bluesky & X</strong>
+                    </div>
+                    <a href="#" class="social-viewall">View feed →</a>
+                </div>
+                
+                <div class="social-body">
+                    <article class="social-item">
+                        <div class="social-meta">@GlobalEnergyMon • on X</div>
+                        <p class="social-text">
+                            Global coal consumption trends 2024: new highs in Asia, declines in Europe.  
+                        </p>
+                        <a class="social-link" href="https://x.com/GlobalEnergyMon/status/1973642628580159811" target="_blank">View on X</a>
+                    </article>
+
+                    <article class="social-item">
+                        <div class="social-meta">@RBReich • on Bluesky</div>
+                        <p class="social-text">
+                            Billionaires are shaping climate policy in ways that sidestep democratic accountability.  
+                        </p>
+                        <a class="social-link" href="https://bsky.app/profile/rbreich.bsky.social/post/3m2ifyekgag2f" target="_blank">View on Bluesky</a>
+                    </article>
+
+                    <article class="social-item">
+                        <div class="social-meta">@EnergyReport • on X</div>
+                        <p class="social-text">
+                            Record solar capacity added worldwide in September ☀️ — momentum continues.  
+                        </p>
+                        <a class="social-link" href="#" target="_blank">View on X</a>
+                    </article>
+                    
+                    <article class="social-item">
+                        <div class="social-meta">@ClimateWatch • on Bluesky</div>
+                        <p class="social-text">
+                            New satellite data shows Arctic sea ice shrank faster than forecast this summer.  
+                        </p>
+                        <a class="social-link" href="#" target="_blank">View on Bluesky</a>
+                    </article>
+
+                    <article class="social-item">
+                        <div class="social-meta">@EnergyReport • on X</div>
+                        <p class="social-text">
+                            Record solar capacity added worldwide in September ☀️ — momentum continues.  
+                        </p>
+                        <a class="social-link" href="#" target="_blank">View on X</a>
+                    </article>
+                    
+                    <article class="social-item">
+                        <div class="social-meta">@ClimateWatch • on Bluesky</div>
+                        <p class="social-text">
+                            New satellite data shows Arctic sea ice shrank faster than forecast this summer.  
+                        </p>
+                        <a class="social-link" href="#" target="_blank">View on Bluesky</a>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
+  <!-- (Optional) Tiny search filter script -->
+  <script>
+    (function () {
+      const input = document.getElementById('topic-search-input');
+      const tree = document.getElementById('topics-tree');
+      if (!input || !tree) return;
+
+      const detailsGroups = Array.from(tree.querySelectorAll('details'));
+      function norm(s){return (s||'').toLowerCase().trim();}
+
+      input.addEventListener('input', e => {
+        const q = norm(e.target.value);
+        const items = Array.from(tree.querySelectorAll('.topic-item'));
+        let groupsWithMatch = new Set();
+
+        items.forEach(li => {
+          const match = norm(li.textContent).includes(q);
+          li.style.display = q ? (match ? '' : 'none') : '';
+          if (match) {
+            const g = li.closest('details');
+            if (g) groupsWithMatch.add(g);
+          }
+        });
+
+        if (q) {
+          detailsGroups.forEach(d => { if (groupsWithMatch.has(d)) d.open = true; });
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
